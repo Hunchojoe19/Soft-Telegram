@@ -8,6 +8,8 @@ const balanceCommand = require('./commands/balance');
 const transferCommand = require('./commands/transfer');
 const withdrawCommand = require('./commands/withdraw');
 const historyCommand = require('./commands/history');
+const dataCommand = require('./commands/data');
+const connectCommand = require('./commands/connect');
 
 const { handleCallbackQuery } = require('./utils/callbacks');
 const { handleDefaultMessage } = require('./utils/messages');
@@ -43,6 +45,8 @@ balanceCommand(bot);
 transferCommand(bot);
 withdrawCommand(bot);
 historyCommand(bot);
+dataCommand(bot);
+connectCommand(bot);
 
 // Handle callback queries (for payment method selection)
 bot.on('callback_query', (callbackQuery) => {
